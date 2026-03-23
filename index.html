@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>make up store stylez</title>
+    <style>
+        body {
+      background-color: #f8f9fa;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      color: #212529;
+      margin: 0;
+      padding: 0;
+    }
+    
+     @keyframes slide {
+        0% { transform:translateX(0); }
+        20% { transform:translateX(0); }
+        25% { transform:translateX(-100%); }
+        45% { transform:translateX(-100%); }
+        50% { transform:translateX(-200%); }
+        70% { transform:translateX(-200%); }
+        75% { transform:translateX(-300%); }
+        95% { transform:translateX(-300%); }
+        100% { transform:translateX(0); }
+      }
+     .slider {
+        position:absolute;
+        width:100%;
+        height:100%;
+        display:flex;
+       animation: slide 16s infinite ease-in-out;
+        z-index:-2;
+      }
+     .slider img {
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        flex-shrink:0;
+      }
+    
+     header {
+      padding: 0.8rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: black;
+      border-bottom: 1px solid #333;
+    }
+     .logo {
+      height:35px;
+      width: auto;
+    }
+     nav ul {
+      display: flex;
+      list-style: none;
+      gap: 3rem;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 500;
+      padding: 0.5rem 0;
+    }
+     nav a:hover {
+      color: #00FFFF;
+    }
+    .store{
+       color:#E051A0 ;
+      text-shadow: 0 10px 30px rgba(114, 255, 92, 0.4);
+    }
+     .store-name {
+        color:#D92525;
+        font-size:4.2rem;
+        display:inline-block;
+      }
+
+    .hero {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      padding: 15rem 4rem;
+      color: white;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      z-index: -1;
+    }
+
+    .hero h1 {
+      font-size: 5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      letter-spacing: 8px;
+      
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 900px;
+      margin-bottom: 2rem;
+    }
+    
+
+    .btn {
+      padding: 1.5rem 2rem;
+      background-color:#E051A0 ;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all ease 0.15s;
+       z-index:1;
+        margin-top:20px;
+      
+    }
+
+    .btn:hover {
+      background-color: #cc2952;
+    }
+     header h2 {
+        color:white;
+        font-size:1.3rem;
+      }
+      
+      nav ul {
+        display:flex;
+        align-items:flex-end;
+        gap:3rem;
+        list-style:none;
+      }
+      nav a {
+        color:white;
+        text-decoration:none;    
+      }
+      nav a:hover{
+        color:#D92525;
+      }
+    .about {
+         padding: 5rem 2rem 2rem 2rem;
+        max-width:1200px;
+        margin:0 auto;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:3rem;
+        align-items:center;
+      }
+      .about img {
+        width:100%;
+        border-radius:8px;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+      }
+      .about h2 {
+        font-size:2.5rem;
+        color:#333;
+        margin-bottom:1rem;
+      }
+      .about h2 span {
+        color:#D92525;
+      }
+      .about p {
+        color:#555;
+        line-height:1.6;
+        font-size:1.1rem;
+      }
+        .collection {
+       padding: 2rem 1.5rem 5rem 1.5rem;
+        background:#fff;
+        
+      }
+      section + section {
+  margin-top: 0;
+}
+      .collection h2 {
+        text-align:center;
+        font-size:2.5rem;
+        margin-bottom:3rem;
+        color:#333;
+      }
+      .collection h2 span {
+        color:#D92525;
+      }
+      .grid {
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(300px,1fr));
+        gap:2rem;
+        max-width:1200px;
+        margin:0 auto;
+        
+      }
+      .card {
+        background:white;
+        border-radius:8px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        transition:transform 0.3s;
+        display: flex;
+  flex-direction: column;
+  height: 100%;
+      }
+      .card:hover {
+        transform:translateY(-5px);
+      }
+      .card img {
+        width:100%;
+        object-fit:cover;
+         height: 250px;
+      }
+      .info {
+        flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+      }
+      .price {
+        color:#D92525;
+        font-weight:bold;
+        font-size:1.2rem;
+        margin-top:0.5rem;
+      }
+      .whatsapp-btn {
+display: block;
+width: 100%;
+margin-top: 1rem;
+padding: 12px;
+background: #E051A0;
+color: white;
+text-align: center;
+text-decoration: none;
+border-radius: 4px;
+font-weight: 500;
+transition: all 0.3s ease;
+box-shadow: 0 5px 15px rgba(224, 81, 160, 0.3);
+      }
+.whatsapp-btn:hover {
+ background: #c43d87; /* darker shade for hover */
+  transform: translateY(-2px)
+}
+    </style>
+      </head>
+      <body>
+     <header>
+ <img src="https://i.postimg.cc/N0sSpfb5/Lash-Technician-Logo-Lashes-Studio-Logo-Lash-Extensions-Logo-Design-Lash-Artist-Branding-Lash-Ma.jpg" alt="barbing Website Logo" class="logo">
+    
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">COLLECTION</a></li>
+        <li><a href="#">GALLERY</a></li>
+      </ul>
+    </nav>
+    <button class="btn">Contact Us</button>
+  </header>
+ <div class="hero">
+     <div class="slider">
+        <img src="https://i.postimg.cc/qqs9bSw1/100-Melanin-Beauty-Luxury-Hair-Extensions-and-Wigs-High-Quality-Aesthetic-Stock-Photos-Featuring-B.jpg" alt="hair style store image 1">
+        <img src="https://i.postimg.cc/85BHqG84/9-Hair-Models.jpg" alt="hair style store image 2">
+        <img src="https://i.postimg.cc/QNvQ0VWX/Beautiful-black-woman-with-long-black-shiny-straight-hair-Premium-AI-generated-image.jpg" alt="hair style store image 3">
+        <img src="https://i.postimg.cc/SK5RkYhw/image.jpg" alt="hair style store image 4">
+      </div>
+    
+    <h1>Unique Stylez<span class="store"> Store</span> </h1>
+    <p>Looking good is good business...</p>
+    <button class="btn">Book Now</button>
+  </div>
+   
+    <section class="about" id="about">
+      <img src="https://i.postimg.cc/tCf56r88/Sessao-fotografica-para-maquilhadora.jpg" alt="Store interior">
+      <div>
+        <h2>About <span>Us</span></h2>
+        <p>At our store, beauty is more than appearance—it’s confidence, self-expression, and individuality. We are dedicated to providing high-quality makeup products that enhance your natural features while allowing you to explore your unique style. Every item in our collection is carefully selected to meet the highest standards of quality, performance, and safety.</p>
+        <p>We believe that everyone deserves access to products that make them feel empowered and radiant. From everyday essentials to bold statement pieces, our range is designed to suit all skin tones, preferences, and occasions. Our commitment goes beyond selling makeup—we aim to create an experience that inspires creativity and builds confidence in every customer.</p>
+        <p>Driven by passion and innovation, we continuously update our collection to stay ahead of beauty trends while maintaining timeless elegance. Whether you're a professional artist or just starting your beauty journey, we are here to support you with products you can trust and results you will love.</p>
+      </section>
+         <section class="collection" id="collection">
+      <h2>Our <span>Collection</span></h2>
+      <div class="grid">
+      <div class="card">
+  <img src="https://i.postimg.cc/tJRjhRn2/download-(7).jpg" alt="make up design 1">
+  
+  <div class="info">
+    <h3>Premium Face Wash</h3>
+    <p>More in your skin tone range</p>
+    
+    <div class="price">$250</div>
+    
+    <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Premium%20Play%20Station%205%20Disc" class="whatsapp-btn">
+      Order Now
+    </a>
+  </div>
+</div>
+        <div class="card">
+          <img src="https://i.postimg.cc/JhmD9J9d/Daily-use-beauty-product-Amazon-beauty-Find.jpg" alt="make up design 2">
+          <div class="info">
+            <h3>Face brushes from unique stylez store</h3>
+            <p>Beauty product from unique stylez store</p>
+            <div class="price">$280</div>
+             <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Classic%20Assasin%20Creed" class="whatsapp-btn">
+      Order Now
+    </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/xC8rCxwx/Maybelline-Fit-Me-Matte-Poreless-Foundation-16H-Oil-Control-Base-for-Oily-Skin.jpg" alt="make up design 3">
+          <div class="info">
+            <h3>Poreless Foundation base</h3>
+            <p>Maybelline Fit Me Matte + Poreless Foundation 🤍 | 16H Oil Control Base for Oily Skin</p>
+            <div class="price">$320</div>
+             <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Play%20Station:%20Call%20Of%20duty" class="whatsapp-btn">
+      Order Now
+    </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/02FHd5LP/download-(8).jpg" alt="make up design 4">
+          <div class="info">
+            <h3>Make up Eye Pencils</h3>
+            <p>For your perfect Contour lines </p>
+            <div class="price">$268</div>
+              <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Need%20For%20Speed" class="whatsapp-btn">
+      Order Now
+    </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/pXs5gp2Q/download-(9).jpg" alt="Game design 5">
+          <div class="info">
+            <h3>Stylez face powder</h3>
+            <p> Definitive smoothning sensation and feel..</p>
+            <div class="price">$350</div>
+             <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Friday%20The%2013th" class="whatsapp-btn">
+      Order Now
+    </a>
+          </div>
+        </div>
+        <div class="card">
+          <img src="https://i.postimg.cc/N0qsVcrf/download-(10).jpg" alt="make up design 6">
+          <div class="info">
+            <h3>Eye lash Extensions</h3>
+            <p>Durable and affordable.</p>
+            <div class="price">$450</div>
+              <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Mortal%20Combat" class="whatsapp-btn">
+      Order Now
+    </a>
+          </div>
+        </div>
+<div class="card">
+  <img src="https://i.postimg.cc/brtLmWDT/download-(11).jpg" alt="Makeup kit">
+  <div class="info">
+    <h3>Complete Makeup Kit</h3>
+    <p>All-in-one beauty kit for flawless looks.</p>
+    <div class="price">$225</div>
+    <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Complete%20Makeup%20Kit" class="whatsapp-btn">
+      Order Now
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://i.postimg.cc/Ls2tpGcY/Luxury-Lipstick-Collection-Neutrals-Berry-Shades.jpg" alt="Lipstick set">
+  <div class="info">
+    <h3>Luxury Lipstick Set</h3>
+    <p>Long-lasting matte and glossy shades.</p>
+    <div class="price">$180</div>
+    <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Luxury%20Lipstick%20Set" class="whatsapp-btn">
+      Order Now
+    </a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="https://i.postimg.cc/DZD48NMr/6-Piece-Makeup-Brush-Set-Essential-Beauty-Tools.jpg" alt="Brush set">
+  <div class="info">
+    <h3>Professional Brush Set</h3>
+    <p>Soft, durable brushes for perfect application.</p>
+    <div class="price">$155</div>
+    <a href="https://wa.me/2348066407195?text=Hi!%20I%20want%20to%20order%20Professional%20Brush%20Set" class="whatsapp-btn">
+      Order Now
+    </a>
+  </div>
+</div>
+    </section>
+  </body>
+</html>
+
